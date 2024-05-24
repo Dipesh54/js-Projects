@@ -1,3 +1,4 @@
+
 const randomColor = function () {
     const hex = '0123456789ABCDEF';
     let color = '#';
@@ -8,7 +9,10 @@ const randomColor = function () {
   };
   
   let intervalId;
+  
   const startChangingColor = function () {
+    
+    
     if (!intervalId) {
       intervalId = setInterval(changeBgColor, 1000);
     }
@@ -17,6 +21,7 @@ const randomColor = function () {
       document.body.style.backgroundColor = randomColor();
     }
   };
+
   const stopChangingColor = function () {
     clearInterval(intervalId);
     intervalId = null;
